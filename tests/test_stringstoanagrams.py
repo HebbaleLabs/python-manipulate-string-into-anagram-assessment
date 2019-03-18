@@ -43,5 +43,5 @@ class StringsToAnagramsTest(unittest.TestCase):
   def test_anagram_long_strings(self, name, input_value, expected):
     self.longMessage = True
     actual = anagram(input_value)
-    message = 'For input {0}, expected value = {1}, and actual value = {2}'.format(input_value, expected, actual)
+    message = 'For input {0}...{1} of length {2}, expected value = {3}, and actual value = {4}'.format(input_value[:6], input_value[len(input_value)-6:], len(input_value), expected, actual)
     self.assertEqual(expected, actual, message)
